@@ -1,0 +1,11 @@
+name: postman
+type: csv
+
+server:
+  url: http://localhost:5000/
+  routes:
+    data: query
+    file: csv
+
+downloads: './downloads/data.csv'
+ 
