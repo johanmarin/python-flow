@@ -51,7 +51,9 @@ def get_data(config: dict) -> pd.DataFrame:
     """    
     url = config['server']['url'] + config['server']['routes']['data']
     response = requests.get(url, json=config['query']) 
-    return pd.DataFrame.from_dict(json.loads(response.text))
+    df = pd.DataFrame.from_dict(json.loads(response.text))
+    print(df.head)
+    return df
 
 def get_file(config: dict):
     """esta función permite obtener los datos desde la API y almacenarlos en un archivo csv en la carpeta downloads
@@ -89,6 +91,7 @@ def get_file(config: dict):
         if os.path.exists(filename):
             df = pd.read_csv(filename)
             os.remove(filename)
+            print(df.head)
             return df
     
 
