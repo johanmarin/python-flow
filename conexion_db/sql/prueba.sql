@@ -1,0 +1,1 @@
+SELECT TOP(4) * FROM dbo.genTerceros;
