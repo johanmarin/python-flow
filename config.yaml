@@ -1,11 +1,12 @@
-name: postman
-type: csv
+name: request
+type: json
 
 server:
-  url: http://localhost:5000/
+  url: http://localhost:8000/
   routes:
     data: query
     file: csv
 
 downloads: './downloads/data.csv'
- 
+
+query_prueba: SELECT TOP(4) * FROM dbo.genTerceros;
