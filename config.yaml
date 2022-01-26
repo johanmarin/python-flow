@@ -7,6 +7,9 @@ server:
     data: query
     file: csv
 
+# carpeta con la queries
+queries_path: '/conexion_db/sql/'
+# Otras carpetas
 downloads: './downloads/data.csv'
 
-query_prueba: SELECT TOP(4) * FROM dbo.genTerceros;
+query_prueba: prueba.sql
