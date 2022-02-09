@@ -2,6 +2,8 @@ import os
 import yaml
 import conexion_db.functions as cfn
 import request.functions as rfn
+import API.functions as f_api
+from fastapi import FastAPI
 
 
 
@@ -20,3 +22,16 @@ if __name__=='__main__':
     print(sql_query)
     sol = rfn.req(config, sql_query)
     print(sol)
+    
+    
+app = FastAPI()
+
+# Root route
+@app.get('/')
+def read_root():
+    return {"Bienvenido":"La API de ####### esta en linea"}
+
+# Get query like json
+@app.get('/prueba')
+def get_query_prueba():
+    return 'Hola'
