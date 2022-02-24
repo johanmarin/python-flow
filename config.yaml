@@ -1,15 +1,15 @@
 name: request
 type: json
 
-server:
-  url: http://localhost:8000/
+DB_server:
+  url: <aqui va la url y el puerto del servidor de basisi de datos>
   routes:
     data: query
     file: csv
 
 # carpeta con la queries
-queries_path: '/conexion_db/sql/'
+queries_path: '/queries_db/sql/'
 # Otras carpetas
-downloads: './downloads/data.csv'
+downloads: 'data.csv'
 
 query_prueba: prueba.sql

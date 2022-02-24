@@ -1,6 +1,6 @@
 import os
 import yaml
-import conexion_db.functions as cfn
+import queries_db.functions as cfn
 import request.functions as rfn
 import API.functions as f_api
 from fastapi import FastAPI

@@ -1,0 +1,1 @@
+SELECT <vars> FROM dbo.<table name>;

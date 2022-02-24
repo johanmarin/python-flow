@@ -5,7 +5,9 @@ COPY . /app
 RUN mkdir /app/downloads
 WORKDIR /app
 
-RUN apt-get update && apt-get install nano
+RUN apt-get update \
+    && apt-get install nano \
+    && apt-install git -y
 
 # pip command without proxy setting
 RUN pip install --upgrade pip && pip install -r requirements.txt
